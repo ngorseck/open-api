@@ -1,0 +1,7 @@
+src/gen/main/java/com/sopra/generated/api/ApiUtil.java
+src/gen/main/java/com/sopra/generated/api/ClientApi.java
+src/gen/main/java/com/sopra/generated/api/ClientApiController.java
+src/gen/main/java/com/sopra/generated/api/ClientApiDelegate.java
+src/gen/main/java/com/sopra/generated/model/ClientDTO.java
+src/gen/main/java/com/sopra/generated/model/ClientResultDTO.java
+src/gen/main/java/com/sopra/generated/model/ClientResultListDTO.java

@@ -1,0 +1,70 @@
+openapi: "3.0.0"
+
+info:
+  title: API Client
+  version: "1.0"
+  description: Test API
+
+servers:
+  - url: http://localhost:8080/service/api
+
+tags:
+  - name: Client
+    description: Client specific data.
+
+paths:
+  /clients:
+    get:
+      tags:
+        - Client
+      summary: Get All Actifs Clients
+      operationId: getAllClients
+      parameters:
+        - name: currentPage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: sizePage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../../model/ClientResultListDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST
+
+  /clients-reference:
+    get:
+      tags:
+        - Client
+      summary: Retrieve an client
+      operationId: getClient
+      parameters:
+        - name: idClient
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../../model/ClientDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST

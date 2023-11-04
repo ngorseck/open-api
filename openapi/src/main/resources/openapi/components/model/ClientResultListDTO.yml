@@ -1,0 +1,7 @@
+type: object
+properties:
+  resultUserList:
+    type: array
+    description: The List of the ClientResultDTO
+    items:
+      $ref: './ClientResultDTO.yml'

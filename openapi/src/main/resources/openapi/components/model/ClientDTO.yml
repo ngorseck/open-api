@@ -1,0 +1,11 @@
+type: object
+properties:
+  identifiant:
+    type: string
+    description: Fonctionnel id of the customer
+  firstName:
+    type: string
+    description: First Name
+  lastName:
+    type: string
+    description: Last Name

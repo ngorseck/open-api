@@ -1,0 +1,26 @@
+openapi: "3.0.0"
+
+info:
+  title: API de Test
+  version: "1.0"
+  description: Test de openAPI
+
+servers:
+  - url: http://localhost:8080/service/api
+
+tags:
+  - name: Client
+    description: Client specific data.
+
+paths:
+
+  ##############
+  ## API Client ##
+  ##############
+
+  /clients:
+    $ref: '../components/api/client.yml#/paths/%2Fclients'
+
+  /clients/{idClient}:
+    $ref: '../components/api/client.yml#/paths/%2Fclients-reference'
+

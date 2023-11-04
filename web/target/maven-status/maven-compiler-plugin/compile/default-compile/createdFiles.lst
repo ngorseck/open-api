@@ -1,0 +1,13 @@
+com\sopra\generated\model\ClientResultListDTO.class
+com\sopra\generated\api\ApiUtil.class
+com\sopra\generated\api\ClientApi.class
+com\sopra\generated\api\ClientApiController$1.class
+com\sopra\generated\model\ClientResultDTO.class
+com\sopra\web\config\SpringConfig.class
+com\sopra\web\WebInitializer.class
+com\sopra\generated\api\ClientApi$1.class
+com\sopra\generated\api\ClientApiDelegate.class
+com\sopra\web\ws\ClientController.class
+com\sopra\web\web\WelcomeController.class
+com\sopra\generated\api\ClientApiController.class
+com\sopra\generated\model\ClientDTO.class
