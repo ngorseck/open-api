@@ -38,7 +38,7 @@ paths:
           content:
             'application/json':
               schema:
-                $ref: '../../model/ClientResultListDTO.yml'
+                $ref: '../model/ClientResultListDTO.yml'
         '404':
           description: NOT FOUND
         '400':
@@ -63,7 +63,7 @@ paths:
           content:
             'application/json':
               schema:
-                $ref: '../../model/ClientDTO.yml'
+                $ref: '../model/ClientDTO.yml'
         '404':
           description: NOT FOUND
         '400':

@@ -1,5 +1,6 @@
-package com.sopra.web.ws;
+package com.sopra.backend.ws;
 
+import com.sopra.generated.api.ClientApi;
 import com.sopra.generated.api.ClientApiDelegate;
 import com.sopra.generated.model.ClientDTO;
 import com.sopra.generated.model.ClientResultDTO;
@@ -10,9 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-//On doit implemente ClientApi
-@RestController
-public class ClientController implements ClientApiDelegate {
+//Ceci ne marche pas
+
+//http://localhost:8080/clients/1
+//http://localhost:8080/clients?currentPage=0&sizePage=2
+@RestController("${openapi.aPIDeTest.base-path::/service/api}")
+public class ClientControllerDelegate implements ClientApiDelegate {
 
     @Override
     public ResponseEntity<ClientResultListDTO> getAllClients(Integer currentPage, Integer sizePage) throws Exception {
@@ -30,7 +34,7 @@ public class ClientController implements ClientApiDelegate {
     @Override
     public ResponseEntity<ClientDTO> getClient(Long idClient) throws Exception {
         ClientDTO clientDTO = new ClientDTO();
-        clientDTO.setIdentifiant("1234");
+        clientDTO.setIdentifiant(Long.toString(idClient));
         clientDTO.setFirstName("Ngor");
         clientDTO.setLastName("SECK");
 

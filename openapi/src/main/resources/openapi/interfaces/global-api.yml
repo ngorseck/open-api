@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 
 info:
-  title: API de Test
+  title: API de Test #ca sera utiliser pour les endPoint @RequestMapping("${openapi.aPIDeTest.base-path:/service/api}")
   version: "1.0"
   description: Test de openAPI
 

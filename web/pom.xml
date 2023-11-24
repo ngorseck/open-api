@@ -148,8 +148,8 @@
                         <configuration>
                             <generatorName>spring</generatorName>
                             <inputSpec>${openapi.dir}/interfaces/global-api.yml</inputSpec>
-                            <generateModels>true</generateModels> <!-- cette valeur peur etre a false tout depend du module -->
-                            <generateApis>true</generateApis> <!-- cette valeur peur etre a false tout depend du module -->
+                            <generateModels>true</generateModels> <!-- cette valeur peut etre a false tout depend du module -->
+                            <generateApis>true</generateApis> <!-- cette valeur peut etre a false tout depend du module -->
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <output>target/generated-sources</output>
                             <configOptions>
