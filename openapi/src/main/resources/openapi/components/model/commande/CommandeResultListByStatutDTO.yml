@@ -1,0 +1,9 @@
+type: object
+properties:
+  status:
+    $ref: './StatusCommande.yml'
+  commandeList:
+    type: array
+    description: The List of the CommandeResultDTO by statut
+    items:
+      $ref: './CommandeDTO.yml'

@@ -1,0 +1,132 @@
+openapi: "3.0.0"
+
+info:
+  title: API Commande
+  version: "1.0"
+  description: Ecommerce API
+
+servers:
+  - url: http://localhost:8080/ecommerce/api
+
+tags:
+  - name: Commande
+    description: Commande specific data.
+
+paths:
+  /commandes:
+    get:
+      tags:
+        - Commande
+      summary: Get All Actifs Commandes
+      operationId: getAllCommandes
+      parameters:
+        - name: currentPage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: sizePage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../model/commande/CommandeResultListDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST
+
+  /commandesByClient:
+    get:
+      tags:
+        - Commande
+      summary: Get All Actifs Commandes by client
+      operationId: getAllCommandesByClient
+      parameters:
+        - name: currentPage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: sizePage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../model/commande/CommandeResultListByClientDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST
+
+  /commandesByStatut:
+    get:
+      tags:
+        - Commande
+      summary: Get All Actifs Commandes
+      operationId: getAllCommandes
+      parameters:
+        - name: currentPage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: sizePage
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../model/commande/CommandeResultListByStatutDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST
+
+  /commandes-reference:
+    get:
+      tags:
+        - Commande
+      summary: Retrieve an commande
+      operationId: getCommande
+      parameters:
+        - name: idCommande
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            'application/json':
+              schema:
+                $ref: '../model/commande/CommandeDTO.yml'
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST

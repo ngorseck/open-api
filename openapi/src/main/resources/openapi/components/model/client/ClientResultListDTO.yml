@@ -1,6 +1,6 @@
 type: object
 properties:
-  resultUserList:
+  clientList:
     type: array
     description: The List of the ClientResultDTO
     items:

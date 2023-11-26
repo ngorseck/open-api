@@ -39,6 +39,10 @@
                 <includes>
                     <include>components/model/enums/*.yml</include>
                     <include>components/model/*.yml</include>
+                    <!--include>components/model/client/*.yml</include>
+                    <include>components/model/commande/*.yml</include>
+                    <include>components/model/produit/*.yml</include>
+                    <include>components/api/*.yml</include-->
                     <include>interfaces/*.yml</include>
                     <include>api/*.yml</include>
                 </includes>

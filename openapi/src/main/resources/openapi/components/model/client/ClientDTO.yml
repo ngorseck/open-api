@@ -1,8 +1,9 @@
 type: object
 properties:
-  identifiant:
-    type: string
+  idClient:
+    type: integer
     description: Fonctionnel id of the customer
+    format: int64
   firstName:
     type: string
     description: First Name

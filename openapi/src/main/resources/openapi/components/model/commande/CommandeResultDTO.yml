@@ -1,0 +1,14 @@
+type: object
+properties:
+  idCommande:
+    type: integer
+    description: Fonctionnel id of the customer
+    format: int64
+  client:
+    description: The commande and his client
+    $ref: '../client/ClientDTO.yml'
+  produits:
+    type: array
+    description: The List of produit and their commande
+    items:
+      $ref: '../article/ArticleDTO.yml'

@@ -1,7 +1,7 @@
 package com.sopra.backend.ws;
 
+
 import com.sopra.generated.api.ClientApi;
-import com.sopra.generated.api.ClientApiDelegate;
 import com.sopra.generated.model.ClientDTO;
 import com.sopra.generated.model.ClientResultDTO;
 import com.sopra.generated.model.ClientResultListDTO;
@@ -26,7 +26,7 @@ public class ClientController implements ClientApi {
         clientDTO.setFirstName("Ngor");
         clientDTO.setLastName("SECK");
         clientResultDTOS.add(clientDTO);
-        clientResultListDTO.setResultUserList(clientResultDTOS);
+        clientResultListDTO.setClientList(clientResultDTOS);
 
         return  ResponseEntity.ok(clientResultListDTO);
     }
@@ -34,7 +34,7 @@ public class ClientController implements ClientApi {
     @Override
     public ResponseEntity<ClientDTO> getClient(Long idClient) throws Exception {
         ClientDTO clientDTO = new ClientDTO();
-        clientDTO.setIdentifiant(Long.toString(idClient));
+        clientDTO.setIdClient(idClient);
         clientDTO.setFirstName("Ngor");
         clientDTO.setLastName("SECK");
 

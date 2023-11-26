@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 
 info:
-  title: API Client
+  title: API Article
   version: "1.0"
   description: Ecommerce API
 
@@ -9,16 +9,16 @@ servers:
   - url: http://localhost:8080/ecommerce/api
 
 tags:
-  - name: Client
-    description: Client specific data.
+  - name: Article
+    description: Article specific data.
 
 paths:
-  /clients:
+  /articles:
     get:
       tags:
-        - Client
-      summary: Get All Actifs Clients
-      operationId: getAllClients
+        - Article
+      summary: Get All Actifs Articles
+      operationId: getAllArticles
       parameters:
         - name: currentPage
           in: query
@@ -38,20 +38,20 @@ paths:
           content:
             'application/json':
               schema:
-                $ref: '../model/client/ClientResultListDTO.yml'
+                $ref: '../model/article/ArticleResultListDTO.yml'
         '404':
           description: NOT FOUND
         '400':
           description: BAD REQUEST
 
-  /clients-reference:
+  /articles-reference:
     get:
       tags:
-        - Client
-      summary: Retrieve an client
-      operationId: getClient
+        - Product
+      summary: Retrieve an Product
+      operationId: getProduct
       parameters:
-        - name: idClient
+        - name: idProduct
           in: path
           required: true
           schema:
@@ -63,7 +63,7 @@ paths:
           content:
             'application/json':
               schema:
-                $ref: '../model/client/ClientDTO.yml'
+                $ref: '../model/article/ArticleDTO.yml'
         '404':
           description: NOT FOUND
         '400':

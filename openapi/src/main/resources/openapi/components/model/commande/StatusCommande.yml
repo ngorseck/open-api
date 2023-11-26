@@ -1,0 +1,7 @@
+type: string
+enum:
+  - NEW
+  - VALIDATED
+  - IN_PROGRESS
+  - TO_COMPLETE
+  - CLOSED

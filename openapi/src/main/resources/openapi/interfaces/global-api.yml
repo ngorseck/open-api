@@ -1,16 +1,20 @@
 openapi: "3.0.0"
 
 info:
-  title: API de Test #ca sera utiliser pour les endPoint @RequestMapping("${openapi.aPIDeTest.base-path:/service/api}")
+  title: API de Ecommerce #ca sera utiliser pour les endPoint @RequestMapping("${openapi.aPIDeTest.base-path:/service/api}")
   version: "1.0"
   description: Test de openAPI
 
 servers:
-  - url: http://localhost:8080/service/api
+  - url: http://localhost:8080/ecommerce/api
 
 tags:
   - name: Client
     description: Client specific data.
+  - name: Article
+    description: Article specific data.
+  - name: Commande
+    description: Commande specific data.
 
 paths:
 
@@ -19,8 +23,33 @@ paths:
   ##############
 
   /clients:
-    $ref: '../components/api/client.yml#/paths/%2Fclients'
+    $ref: '../components/api/client.yml#/paths/~1clients'
 
   /clients/{idClient}:
-    $ref: '../components/api/client.yml#/paths/%2Fclients-reference'
+    $ref: '../components/api/client.yml#/paths/~1clients-reference'
 
+  ##############
+  ## API Commande ##
+  ##############
+
+  /commandes:
+    $ref: '../components/api/commande.yml#/paths/~1commandes'
+
+  /commandesByClient:
+    $ref: '../components/api/commande.yml#/paths/~1commandesByClient'
+
+  /commandesByStatut:
+    $ref: '../components/api/commande.yml#/paths/~1commandesByStatut'
+
+  /commandes/{idCommande}:
+    $ref: '../components/api/commande.yml#/paths/~1commandes-reference'
+
+  ##############
+  ## API Produits ##
+  ##############
+
+  /articles:
+    $ref: '../components/api/article.yml#/paths/~1articles'
+
+  /articles/{idArticle}:
+    $ref: '../components/api/article.yml#/paths/~1articles-reference'

@@ -118,7 +118,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<generatorName>spring</generatorName>
+							<generatorName>spring</generatorName> <!-- pour backend spring -->
 							<inputSpec>${openapi.dir}/interfaces/global-api.yml</inputSpec>
 							<generateModels>true</generateModels> <!-- cette valeur peut etre a false tout depend du module -->
 							<generateApis>true</generateApis> <!-- cette valeur peut etre a false tout depend du module -->
@@ -136,7 +136,6 @@
 							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
 						</configuration>
 					</execution>
-
 				</executions>
 			</plugin>
 		</plugins>

@@ -1,0 +1,7 @@
+type: object
+properties:
+  commandeList:
+    type: array
+    description: The List of the CommandeResultDTO
+    items:
+      $ref: './CommandeResultDTO.yml'

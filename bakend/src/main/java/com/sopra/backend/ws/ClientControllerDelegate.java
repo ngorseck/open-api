@@ -1,12 +1,9 @@
 package com.sopra.backend.ws;
 
-import com.sopra.generated.api.ClientApi;
-import com.sopra.generated.api.ClientApiDelegate;
 import com.sopra.generated.model.ClientDTO;
 import com.sopra.generated.model.ClientResultDTO;
 import com.sopra.generated.model.ClientResultListDTO;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +12,10 @@ import java.util.List;
 
 //http://localhost:8080/clients/1
 //http://localhost:8080/clients?currentPage=0&sizePage=2
-@RestController("${openapi.aPIDeTest.base-path::/service/api}")
-public class ClientControllerDelegate implements ClientApiDelegate {
+//@RestController("${openapi.aPIDeTest.base-path::/service/api}")
+public class ClientControllerDelegate { //implements ClientApiDelegate {
 
-    @Override
+    //@Override
     public ResponseEntity<ClientResultListDTO> getAllClients(Integer currentPage, Integer sizePage) throws Exception {
         ClientResultListDTO clientResultListDTO = new ClientResultListDTO();
         List<ClientResultDTO> clientResultDTOS = new ArrayList<>();
@@ -26,15 +23,15 @@ public class ClientControllerDelegate implements ClientApiDelegate {
         clientDTO.setFirstName("Ngor");
         clientDTO.setLastName("SECK");
         clientResultDTOS.add(clientDTO);
-        clientResultListDTO.setResultUserList(clientResultDTOS);
+        clientResultListDTO.setClientList(clientResultDTOS);
 
         return  ResponseEntity.ok(clientResultListDTO);
     }
 
-    @Override
+    //@Override
     public ResponseEntity<ClientDTO> getClient(Long idClient) throws Exception {
         ClientDTO clientDTO = new ClientDTO();
-        clientDTO.setIdentifiant(Long.toString(idClient));
+        clientDTO.setIdClient(idClient);
         clientDTO.setFirstName("Ngor");
         clientDTO.setLastName("SECK");
 
