@@ -8,7 +8,7 @@
 		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sopra</groupId>
+	<groupId>com.samanecoporation</groupId>
 	<artifactId>backen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bakend</name>
@@ -104,7 +104,7 @@
 				<version>${openapi-generator.version}</version>
 				<dependencies>
 					<dependency>
-						<groupId>com.sopra</groupId>
+						<groupId>com.samanecorporation</groupId>
 						<artifactId>openapi</artifactId>
 						<classifier>api</classifier>
 						<version>${openapi.version}</version>

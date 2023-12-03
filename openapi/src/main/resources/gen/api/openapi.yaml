@@ -1,0 +1,215 @@
+openapi: 3.0.0
+info:
+  description: Ecommerce API
+  title: API Client
+  version: "1.0"
+servers:
+- url: http://localhost:8080/ecommerce/api
+tags:
+- description: Client specific data.
+  name: Client
+paths:
+  /clients:
+    get:
+      operationId: getAllClients
+      parameters:
+      - explode: true
+        in: query
+        name: currentPage
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: sizePage
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                clientList:
+                - firstName: Ngor
+                  lastName: SECK
+                - firstName: Moussa
+                  lastName: SECK
+                - firstName: Fatou
+                  lastName: SOW
+                - firstName: Jean
+                  lastName: DIATTA
+              schema:
+                $ref: '#/components/schemas/ClientResultListDTO'
+          description: SUCCESS
+        "404":
+          description: NOT FOUND
+        "400":
+          description: BAD REQUEST
+      summary: Get All Actifs Clients
+      tags:
+      - Client
+      x-accepts: application/json
+    post:
+      operationId: addClient
+      requestBody:
+        content:
+          application/json:
+            example:
+              idClient: 0
+              firstName: Ngor
+              lastName: SECK
+            schema:
+              $ref: '#/components/schemas/ClientDTO'
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                idClient: 1
+                firstName: Ngor
+                lastName: SECK
+              schema:
+                $ref: '#/components/schemas/ClientDTO'
+          description: SUCCESS
+        "404":
+          description: NOT FOUND
+        "400":
+          description: BAD REQUEST
+      summary: Add a client
+      tags:
+      - Client
+      x-content-type: application/json
+      x-accepts: application/json
+  /clients-reference:
+    get:
+      operationId: getClient
+      parameters:
+      - example:
+          idClient: 1
+        explode: false
+        in: path
+        name: idClient
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              examples:
+                client1:
+                  value:
+                    idClient: 1
+                    firstName: Ngor
+                    lastName: SECK
+                client2:
+                  value:
+                    idClient: 1
+                    firstName: Ngor
+                    lastName: SECK
+              schema:
+                $ref: '#/components/schemas/ClientDTO'
+          description: SUCCESS
+        "404":
+          description: NOT FOUND
+        "400":
+          description: BAD REQUEST
+      summary: Retrieve an client
+      tags:
+      - Client
+      x-accepts: application/json
+    put:
+      operationId: updateClient
+      parameters:
+      - example:
+          idClient: 1
+        explode: false
+        in: path
+        name: idClient
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            examples:
+              client:
+                value:
+                  idClient: 1
+                  firstName: Ngor
+                  lastName: SECK
+            schema:
+              $ref: '#/components/schemas/ClientDTO'
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                idClient: 1
+                firstName: Ngor
+                lastName: SECK
+              schema:
+                $ref: '#/components/schemas/ClientDTO'
+          description: SUCCESS
+        "404":
+          description: NOT FOUND
+        "400":
+          description: BAD REQUEST
+      summary: Add a client
+      tags:
+      - Client
+      x-content-type: application/json
+      x-accepts: application/json
+components:
+  schemas:
+    ClientResultListDTO:
+      example:
+        clientList:
+        - lastName: lastName
+          firstName: firstName
+        - lastName: lastName
+          firstName: firstName
+      properties:
+        clientList:
+          description: The List of the ClientResultDTO
+          items:
+            $ref: '#/components/schemas/ClientResultDTO'
+          type: array
+      type: object
+    ClientDTO:
+      example:
+        firstName: firstName
+        lastName: lastName
+        idClient: 0
+      properties:
+        idClient:
+          description: Fonctionnel id of the customer
+          format: int64
+          type: integer
+        firstName:
+          description: First Name
+          type: string
+        lastName:
+          description: Last Name
+          type: string
+      type: object
+    ClientResultDTO:
+      example:
+        lastName: lastName
+        firstName: firstName
+      properties:
+        lastName:
+          type: string
+        firstName:
+          type: string
+      type: object
+

@@ -1,4 +1,4 @@
-openapi: "3.0.0"
+openapi: 3.0.3
 
 info:
   title: API Client
@@ -33,12 +33,52 @@ paths:
             type: integer
             format: int32
       responses:
-        '200':
+        200:
           description: SUCCESS
           content:
             'application/json':
               schema:
                 $ref: '../model/client/ClientResultListDTO.yml'
+              example:
+                clientList:
+                    - firstName: Ngor
+                      lastName: SECK
+                    - firstName: Moussa
+                      lastName: SECK
+                    - firstName: Fatou
+                      lastName: SOW
+                    - firstName: Jean
+                      lastName: DIATTA
+        404:
+          description: NOT FOUND
+        400:
+          description: BAD REQUEST
+
+    post:
+      tags:
+        - Client
+      summary: Add a client
+      operationId: addClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '../model/client/ClientDTO.yml'
+            example:
+              idClient: 0
+              firstName: Ngor
+              lastName: SECK
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            application/json:
+              schema:
+                $ref: '../model/client/ClientDTO.yml'
+              example:
+                idClient: 1
+                firstName: Ngor
+                lastName: SECK
         '404':
           description: NOT FOUND
         '400':
@@ -57,13 +97,67 @@ paths:
           schema:
             type: integer
             format: int64
+          example:
+            idClient: 1
       responses:
         '200':
           description: SUCCESS
           content:
-            'application/json':
+            application/json:
               schema:
                 $ref: '../model/client/ClientDTO.yml'
+              examples:
+                client1:
+                  value:
+                    idClient: 1
+                    firstName: Ngor
+                    lastName: SECK
+                client2:
+                  value:
+                    idClient: 1
+                    firstName: Ngor
+                    lastName: SECK
+        '404':
+          description: NOT FOUND
+        '400':
+          description: BAD REQUEST
+
+    put:
+      tags:
+        - Client
+      summary: Add a client
+      operationId: updateClient
+      parameters:
+        - name: idClient
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+          example:
+            idClient: 1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '../model/client/ClientDTO.yml'
+            examples:
+              client:
+                value:
+                  idClient: 1
+                  firstName: Ngor
+                  lastName: SECK
+      responses:
+        '200':
+          description: SUCCESS
+          content:
+            application/json:
+              schema:
+                $ref: '../model/client/ClientDTO.yml'
+              example:
+                idClient: 1
+                firstName: Ngor
+                lastName: SECK
         '404':
           description: NOT FOUND
         '400':
