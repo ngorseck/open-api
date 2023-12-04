@@ -1,3 +1,45 @@
 frontend/app-frontend/node_modules/
 frontend/app-frontend/node_modules
 /frontend/app-frontend/node_modules
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+frontend/app-frontend/npm-debug.log
+frontend/app-frontend/yarn-error.log
+
+# IDEs and editors
+.idea/
+*/.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+*/.DS_Store
+*/Thumbs.db
