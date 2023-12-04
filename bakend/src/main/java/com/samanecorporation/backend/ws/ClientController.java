@@ -18,20 +18,12 @@ import java.util.List;
 
 //ceci marche
 
-//http://localhost:8080/clients/1
-//http://localhost:8080/clients?currentPage=0&sizePage=2
+//http://localhost:8080/ecommerce/api/clients/1
+//http://localhost:8080/ecommerce/api/clients?currentPage=0&sizePage=2
 @RestController
 public class ClientController implements ClientApi {
 
     @Override
-    @ApiOperation(value = "Get All Actifs Clients", nickname = "getAllClients", notes = "", response = ClientResultListDTO.class, tags={ "Client", })
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "SUCCESS", response = ClientResultListDTO.class),
-            @ApiResponse(code = 404, message = "NOT FOUND"),
-            @ApiResponse(code = 400, message = "BAD REQUEST") })
-    @RequestMapping(value = "/clients",
-            produces = { "application/json" },
-            method = RequestMethod.GET)
     public ResponseEntity<ClientResultListDTO> getAllClients(Integer currentPage, Integer sizePage) throws Exception {
         ClientResultListDTO clientResultListDTO = new ClientResultListDTO();
         List<ClientResultDTO> clientResultDTOS = new ArrayList<>();

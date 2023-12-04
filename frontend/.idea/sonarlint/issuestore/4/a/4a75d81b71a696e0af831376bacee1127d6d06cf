@@ -1,0 +1,18 @@
+
+Htypescript:S3863"''../model/models' import is duplicated.(†´‡êşÿÿÿÿ
+Htypescript:S3863"''../model/models' import is duplicated.(ÒØ¥ ıÿÿÿÿ
+Htypescript:S3863"''../model/models' import is duplicated.(íŸíûÿÿÿÿ
+Ntypescript:S1128"2Remove this unused import of 'COLLECTION_FORMATS'.(ç§õ
+†typescript:S66062"jPrefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.(¯“˜¬
+utypescript:S3776@"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(µœµûÿÿÿÿ
+stypescript:S4325G"RThis assertion is unnecessary since it does not change the type of the expression.(Ö¿ªªøÿÿÿÿ
+ntypescript:S4325K"RThis assertion is unnecessary since it does not change the type of the expression.(’•—©
+`typescript:S1874K"D'(from: number, length?: number | undefined): string' is deprecated.(’•—©
+|typescript:S6582y"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(©ß¥ùÿÿÿÿ
+}typescript:S6582‡"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÁµ…ùÿÿÿÿ
+}typescript:S6582µ"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(©ß¥ùÿÿÿÿ
+}typescript:S6582Ã"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÁµ…ùÿÿÿÿ
+}typescript:S6582ñ"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(©ß¥ùÿÿÿÿ
+}typescript:S6582ÿ"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÁµ…ùÿÿÿÿ
+}typescript:S6582Ÿ"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(©ß¥ùÿÿÿÿ
+}typescript:S6582­"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÁµ…ùÿÿÿÿ

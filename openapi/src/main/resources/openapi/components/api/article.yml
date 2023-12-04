@@ -47,11 +47,11 @@ paths:
   /articles-reference:
     get:
       tags:
-        - Product
-      summary: Retrieve an Product
-      operationId: getProduct
+        - Article
+      summary: Retrieve an Article
+      operationId: getArticle
       parameters:
-        - name: idProduct
+        - name: idArticle
           in: path
           required: true
           schema:

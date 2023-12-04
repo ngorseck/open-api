@@ -35,7 +35,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>app-client/dist</directory>
+                            <directory>app-frontend/dist</directory>
                             <includes>
                                 <include>*</include>
                             </includes>
@@ -44,17 +44,16 @@
                 </configuration>
             </plugin>
             <!-- build angular with yarn -->
-            <!--plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>${exec-maven-plugin.version}</version>
                 <configuration>
-                    <workingDirectory>${basedir}/app-client/</workingDirectory>
+                    <workingDirectory>${basedir}/app-frontend/</workingDirectory>
                 </configuration>
-                <executions-->
-
+                <executions>
                     <!-- Install app dependencies - yarn install -->
-                    <!--execution>
+                    <execution>
                         <id>yarn install</id>
                         <goals>
                             <goal>exec</goal>
@@ -66,10 +65,10 @@
                                 <argument>install</argument>
                             </arguments>
                         </configuration>
-                    </execution-->
+                    </execution>
 
                     <!-- Build production app : yarn run build-prod -->
-                    <!--execution>
+                    <execution>
                         <id>prod</id>
                         <goals>
                             <goal>exec</goal>
@@ -82,9 +81,9 @@
                             </arguments>
                         </configuration>
                     </execution>
-
                 </executions>
-            </plugin-->
+            </plugin>
+
             <!-- plugin de openAPI pour angular -->
             <plugin>
                 <groupId>org.openapitools</groupId>
@@ -92,7 +91,7 @@
                 <version>${openapi-generator.version}</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.sopra</groupId>
+                        <groupId>com.samanecorporation</groupId>
                         <artifactId>openapi</artifactId>
                         <classifier>api</classifier>
                         <version>${openapi.version}</version>
@@ -108,7 +107,7 @@
                         <configuration>
                             <inputSpec>openapi/interfaces/global-api.yml</inputSpec>
                             <generatorName>typescript-angular</generatorName> <!-- pour front -->
-                            <output>${project.basedir}/app-client/src/lib/openapi</output>
+                            <output>${project.basedir}/app-frontend/src/lib/openapi</output>
                             <typeMappings>
                                 <typeMapping>object=any</typeMapping>
                             </typeMappings>

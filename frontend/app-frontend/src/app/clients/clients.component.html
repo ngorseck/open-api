@@ -1,0 +1,20 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of clients">
+            <td>{{c.firstName}}</td>
+            <td>{{c.lastName}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
