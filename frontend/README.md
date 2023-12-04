@@ -1,16 +1,16 @@
 Creer un dossier sur votre projet nomme ***app-frontend***
 
-***Creation du projet dans le repertoir app-frontend***
+***Creation du projet dans le repertoire app-frontend via cette commande***
 ```bash
 ng new app-frontend --directory=./
 ```
 
-***Creation du composant clients***
+***Creation du composant clients en se positionnant dans app-frontend, cette fois ci***
 ```bash
 ng g c clients
 ```
 
-***Installation de bootstrap***
+***Installation de bootstrap app-frontend aussi***
 ```bash
 npm i bootstrap bootstrap-icons
 ```
