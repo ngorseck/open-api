@@ -1,13 +1,21 @@
-Creation du projet dans le repertoir app-frontend
+Creer un dossier sur votre projet nomme ***app-frontend***
+
+***Creation du projet dans le repertoir app-frontend***
+```bash
 ng new app-frontend --directory=./
+```
 
-Creation du composant cliens
+***Creation du composant clients***
+```bash
 ng g c clients
+```
 
-Installation de bootstrap
+***Installation de bootstrap***
+```bash
 npm i bootstrap bootstrap-icons
+```
 
-Apres installation de bootstrap, allez y dans le angular.json puis ajouter les lignes dans styles et scripts
+***Apres installation de bootstrap, allez y dans le angular.json puis ajouter les lignes dans styles et scripts***
 "styles": [
     "src/styles.css",
     "node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -17,5 +25,5 @@ Apres installation de bootstrap, allez y dans le angular.json puis ajouter les l
 ],
 
 
-Puis dans styles.css qui est dans le repertoire src:
+***Puis dans styles.css qui est dans le repertoire src:***
 @import "bootstrap-icons/font/bootstrap-icons.min.css";
