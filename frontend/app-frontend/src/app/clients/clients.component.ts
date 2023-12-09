@@ -15,9 +15,6 @@ export class ClientsComponent implements OnInit{
 
   clients: any;
   constructor(private clientServives: ClientService) {
-
-  }
-  ngOnInit() {
     this.clientServives.getAllClients(0, 2)
       .subscribe({
         next: datas => {
@@ -27,6 +24,8 @@ export class ClientsComponent implements OnInit{
           console.log(err)
         }
       })
-    console.log(this.clients);
+  }
+  ngOnInit() {
+
   }
 }

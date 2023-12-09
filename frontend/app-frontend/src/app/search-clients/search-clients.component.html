@@ -1,0 +1,7 @@
+<div class="d-flex">
+  <input #idClient class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success"
+          (click)="getClient(Number(idClient.value))">
+    Search
+  </button>
+</div>
